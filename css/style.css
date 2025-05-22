@@ -16,6 +16,7 @@ header {
     background-color: #f9e6e0;
     color: #000000;
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
     height: 10vh;
@@ -113,7 +114,7 @@ form {
     align-items: center;
     gap: 1rem;
     margin-top: 35px;
-    max-width: 65%;
+    max-width: 90%;
     width: 100%;
 }
 
@@ -132,6 +133,17 @@ form textarea {
     border-radius: 20px;
 }
 
+form input[type='checkbox'] {
+    padding: 0%;
+    margin: 0%;
+    width: auto;
+}
+
+form div {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
 
 /* MEDIA */
 
@@ -195,10 +207,17 @@ footer img {
 }
 
 
-#section_presentation {
+#section_about {
     background-color: #ffffff;
     color: #000000;
-    margin: 2.5%;
+}
+
+#section_about ul {
+    list-style: none;
+}
+
+#section_about li {
+    padding: 1rem;
 }
 
 #section_services {
@@ -368,6 +387,14 @@ footer img {
     width: 100%;
 }
 
+.container_galerie_1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
 .card_galerie {
     display: flex;
     flex-direction: column;
@@ -387,4 +414,120 @@ footer img {
     border: solid;
     border-color: #000000;
     border-width: 8px;
+}
+
+
+/* RESPONSIVE */
+
+@media only screen and (max-width:1000px) {
+    body {
+        font-size: 24px;
+    }
+
+    header {
+        flex-direction: column;
+        min-height: 15vh;
+        padding: 0 5px 5px;
+    }
+
+    header nav {
+        display: flex;
+        flex-direction: row;
+    }
+
+    footer {
+        font-size: 1rem;
+    }
+
+    .container_top {
+        flex-direction: column-reverse;
+        text-align: center;
+        width: 100%;
+    }
+
+    .card_top {
+        max-width: 85%;
+        max-height: 75vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #section_top img {
+        height: 30vh;
+        width: 100%;
+    }
+
+    #section_top h1 {
+        font-size: 3rem;
+    }
+
+    .container_about {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .card_about {
+        max-width: 90%;
+        height: fit-content;
+        text-align: justify;
+        margin-bottom: 5%;
+    }
+
+    .card_about h2 {
+        text-align: center;
+    }
+
+    #section_about img {
+        height: 100%;
+        max-height: 50vh;
+        max-width: 80%;
+        width: 100%;
+        object-fit: cover;
+        border: solid;
+        border-color: #000000;
+        border-width: 5px;
+    }
+
+    .container_services {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card_services {
+        max-width: 85%;
+        height: 100%;
+        max-height: 40vh;
+        padding: 2.5%;
+    }
+
+    .card_services img {
+        width: 100%;
+        height: 100%;
+        max-height: 25vh;
+    }
+
+    .container_galerie {
+        flex-direction: column;
+    }
+
+    .container_galerie_1 {
+        display: none;
+    }
+
+    .card_galerie {
+        max-width: 85%;
+        max-height: 75vh;
+        display: flex;
+        flex-direction: column
+    }
+
+
+    .card_galerie img {
+        height: 30vh;
+        width: 100%;
+    }
+
+    form {
+        max-width: 100%;
+    }
 }
